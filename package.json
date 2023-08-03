@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "lightgallery": "^2.7.1",
+    "swiper": "^10.1.0",
+    "vue": "^3.3.4",
+    "vue-class-component": "^7.2.6",
     "vue-router": "^4.0.3",
     "vuetify": "^3.3.9",
     "vuex": "^4.1.0"
