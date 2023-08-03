@@ -1,0 +1,17 @@
+// _fonts.scss
+
+$font-path: '@/assets/fonts/'; // Путь к папке с шрифтами
+
+@function load-roboto-font($font-weight, $font-format) {
+  // Генерируем URL для шрифта с заданным начертанием и форматом
+  @return url('#{$font-path}Roboto-#{$font-weight}.#{$font-format}')
+    format('#{$font-format}');
+}
+
+// Создаем SCSS переменные для каждого начертания и формата шрифта
+$roboto-thin: load-roboto-font(Thin, ttf);
+$roboto-light: load-roboto-font(Light, ttf);
+$roboto-regular: load-roboto-font(Regular, ttf);
+$roboto-medium: load-roboto-font(Medium, ttf);
+$roboto-bold: load-roboto-font(Bold, ttf);
+$roboto-black: load-roboto-font(Black, ttf);
