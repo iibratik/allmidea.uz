@@ -22,7 +22,12 @@
         </v-col>
       </template>
     </v-row>
-    <swiper :slides-per-view="2" :space-between="30" :navigation="true" :modules="modules">
+    <swiper
+      :slides-per-view="2"
+      :space-between="30"
+      :navigation="true"
+      :modules="modules"
+    >
       <swiper-slide v-for="slide in imagesCount" :key="slide">
         <img
           class="slider-img"
@@ -34,10 +39,10 @@
   </div>
 </template>
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css/navigation'
+import 'swiper/css'
 export default {
   components: {
     Swiper,

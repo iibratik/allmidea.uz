@@ -1,15 +1,13 @@
 {
-  "name": "allmidea.uz",
+  "name": "almidea",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "json": "json-server --watch jsons/db.json"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "lightgallery": "^2.7.1",
     "swiper": "^10.1.0",
     "vue": "^3.3.4",
     "vue-class-component": "^7.2.6",
