@@ -21,6 +21,9 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "glob": "^10.3.3",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
     "sass": "^1.64.1",
     "sass-loader": "^12.6.0"
   },
