@@ -12,16 +12,16 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes, 
+  routes,
 })
 
-// // Глобальный навигационный хук `afterEach`
-// router.afterEach((to) => {
-//   if (to.meta.title) {
-//     document.title = to.meta.title
-//   } else {
-//     document.title = 'Страница' // title по default
-//   }
-// })
+// Глобальный навигационный хук `afterEach`
+router.afterEach((to) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  } else {
+    document.title = 'Галерея' // title по default
+  }
+})
 
 export default router

@@ -18,9 +18,20 @@
 }
 .slider-img {
   height: 60em;
-  background-size: cover;
 }
 .swiper-slide {
   display: flex;
   justify-content: center;
+}
+.card__slider-img{
+  width: 80%;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-button-next{
+  right: 0;
+}
+.model__slider{
+  margin: 50px 0;
 }
