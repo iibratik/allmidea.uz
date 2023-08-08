@@ -12,7 +12,7 @@
       >
     </div>
     <v-row>
-      <template v-for="(image, imgIdx) in imageLayout" :key="imgIdx">
+      <template v-for="(image) in imageLayout" :key="image">
         <v-col v-if="image.name" class="gallery-image" :cols="image.cols">
           <v-img
             :src="require(`@/assets/images/gallery/${image.name}`)"
