@@ -11,6 +11,7 @@
   >
     <swiper-slide class="slide-card" v-for="image in images" :key="image">
       <img
+      loading="lazy"
         class="slider-img"
         :src="require(`@/assets/images/${path}/${image}.${format}`)"
         alt="slider-img"
