@@ -2,8 +2,8 @@
   <v-app>
     <Navbar />
     <Loader v-if="loaderStatus">
-    <router-view>
-    </router-view>
+      <router-view>
+      </router-view>
     </Loader>
     <router-view v-else>
     </router-view>
@@ -25,8 +25,17 @@ export default {
     };
   },
   created() {
+    const savedLoaderStatus = localStorage.getItem('loaderStatus');
+
+    if (savedLoaderStatus === 'false') {
+      this.loaderStatus = false;
+    }
+
     setTimeout(() => {
-      this.loaderStatus = false; // Установите loaderStatus в false после 5 секунд
+      this.loaderStatus = false;
+
+      // Сохраняем состояние в Local Storage
+      localStorage.setItem('loaderStatus', 'false');
     }, 5000);
   },
 };

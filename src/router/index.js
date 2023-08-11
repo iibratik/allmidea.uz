@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Galery from '@/views/Galery.vue'
+import Test from '@/views/Test.vue'
 
 const routes = [
   {
     path: '/',
     meta: { title: 'Галерея' },
     component: Galery,
+    // Пустой список работников, здесь они будут загружаться из хранилища
+  },
+  {
+    path: '/test',
+    meta: { title: 'Тест' },
+    component: Test,
     // Пустой список работников, здесь они будут загружаться из хранилища
   },
 ]
