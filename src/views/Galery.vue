@@ -5,6 +5,8 @@
       :images="sliderimagesCount"
       :path="sliderPath"
       :format="sliderFormat"
+      :slidesPerView="1"
+      imageClass=""
     />
     <section class="section gallery">
       <h2 class="section-title gallery-title">

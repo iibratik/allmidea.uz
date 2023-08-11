@@ -3,9 +3,6 @@
     display: flex;
     justify-content: center;
   }
-  &-page {
-    margin-top: 100px;
-  }
   margin-top: 30px;
   &-title {
     font-size: 30px;
@@ -13,6 +10,7 @@
     color: var(--primary-color);
     text-align: center;
   }
+
   &-slider {
     .slider-img {
       height: 50em;
@@ -22,11 +20,11 @@
       justify-content: center;
     }
     .swiper-button-prev {
-      left: 10%;
+      left: 2%;
       color: var(--primary-color);
     }
     .swiper-button-next {
-      right: 10%;
+      right: 2%;
       color: var(--primary-color);
     }
   }
@@ -56,4 +54,7 @@
   .second {
     margin-top: 30px;
   }
+}
+.price-card__img{
+  height: 30em !important;
 }

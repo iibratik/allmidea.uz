@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <Navbar />
-      <router-view>
+    <div class="view">
+      <router-view >
       </router-view>
+    </div>
     <Footer />
   </v-app>
 </template>
@@ -22,3 +24,8 @@ export default {
 
 };
 </script>
+<style lang="scss" >
+.view{
+  padding-top: 150px;
+}
+</style>

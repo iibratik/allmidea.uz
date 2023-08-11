@@ -1,18 +1,17 @@
 <template>
   <swiper
-    :slides-per-view="1"
+    :slides-per-view="slidesPerView"
     :space-between="15"
     :navigation="true"
     :loop="true"
     :autoplay="{ delay: 4000, pauseOnMouseEnter: true }"
     :modules="modules"
-    lazy
     class="gallery-slider"
   >
     <swiper-slide class="slide-card" v-for="image in images" :key="image">
       <img
-      loading="lazy"
         class="slider-img"
+        :class="imageClass"
         :src="require(`@/assets/images/${path}/${image}.${format}`)"
         alt="slider-img"
       />
@@ -45,6 +44,13 @@ export default {
     },
     path:{
       typeof: String,
+    },
+    slidesPerView:{
+      typeof: Number,
+      required: true,
+    },
+    imageClass:{
+      type: String,
     }
   },
 }

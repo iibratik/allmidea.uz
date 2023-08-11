@@ -1,5 +1,33 @@
 @media screen and (max-width: 992px) {
+  .image-scroll-container{
+    overflow-x: scroll !important;
+  }
+  .modal-image{
+    transform: scale(2.4) translateX(25%);
+  }
+  .image-contain{
+    max-width: 100%;
+  }
+  .image{
+    height: auto;
+  }
+  .view{
+    padding-top: 75px;
+  }
+  .mobile-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .v-toolbar{
+    height: 64px;
+  }
   .gallery {
+    &-title{
+        font-size: 20px;
+    }
     &-page {
       margin-top: 120px;
     }

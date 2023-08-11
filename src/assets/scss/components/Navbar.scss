@@ -1,5 +1,23 @@
-.navbar-toolbar {
-  padding: 10px 0;
+.navbar {
+  &-toolbar {
+    padding: 10px 0 10px 0;
+  }
+  &-logos{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+  }
+  &-bottom{
+    transform: translateY(-97%);
+  }
+}
+.v-toolbar{
+  height: 100px;
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
 }
 .midea-logo {
   transform: scale(0.3) translateX(-70%);
@@ -7,3 +25,4 @@
 .midea-slogan {
   padding-right: 80px;
 }
+

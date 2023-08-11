@@ -1,26 +1,96 @@
 <template>
-  <v-app-bar class="navbar-toolbar" color="primary" prominent>
-    <img
-    loading="lazy"
-      class="midea-logo"
-      src="@/assets/images/Nav/Midea_logo_blue.svg"
-      alt="midea-logo"
-    />
-    <v-spacer v-if="isSpacer"></v-spacer>
-    <img
-      class="midea-slogan"
-      src="@/assets/images/Nav/Midea_slogan_white.svg"
-      alt="slogan"
-      loading="lazy"
-    />
-    
+  <v-app-bar v-if="isSpacer" class="navbar-toolbar" color="primary">
+    <v-row class="navbar-logos">
+      <router-link to="/">
+        <img
+          loading="lazy"
+          class="midea-logo"
+          src="@/assets/images/Nav/Midea_logo_blue.svg"
+          alt="midea-logo"
+        />
+      </router-link>
+      <v-spacer> </v-spacer>
+      <img
+        class="midea-slogan"
+        src="@/assets/images/Nav/Midea_slogan_white.svg"
+        alt="slogan"
+        loading="lazy"
+      />
+    </v-row>
+    <v-row class="navbar-bottom">
+      <v-tabs bg-color="primary">
+        <v-tab :to="item.link" v-for="item in links" :key="item">{{
+          item.title
+        }}</v-tab>
+      </v-tabs>
+    </v-row>
   </v-app-bar>
+  <v-app-bar color="primary" v-else>
+    <v-row class="mobile-nav">
+      <router-link to="/">
+        <img
+          loading="lazy"
+          class="midea-logo"
+          src="@/assets/images/Nav/Midea_logo_blue.svg"
+          alt="midea-logo"
+        />
+      </router-link>
+      <v-btn
+        @click="isActiveNav = !isActiveNav"
+        icon="mdi-format-list-bulleted"
+      >
+      </v-btn>
+    </v-row>
+  </v-app-bar>
+  <v-navigation-drawer
+    color="primary"
+    v-model="isActiveNav"
+    location="right"
+    temporary
+  >
+    <v-tabs direction="column" bg-color="primary">
+      <v-tab
+        :active-class="item.link === $route.path ? 'tab-active' : ''"
+        :to="item.link"
+        v-for="item in links"
+        :key="item"
+        >{{ item.title }}</v-tab
+      >
+    </v-tabs>
+  </v-navigation-drawer>
 </template>
 <script>
 export default {
   data() {
     return {
       isSpacer: window.innerWidth <= 992 ? false : true,
+      links: [
+        {
+          title: 'ГЛАВНАЯ',
+          link: '/',
+        },
+        {
+          title: 'ВОДОНАГРЕВАТЕЛИ',
+          link: '/water-heaters',
+        },
+        {
+          title: 'ГАЗОВЫЕ ВОДОНАГРЕВАТЕЛИ',
+          link: '/gas-water-heaters',
+        },
+        {
+          title: 'ГАЗОВЫЕ КОТЛЫ ',
+          link: '/gas-boilers',
+        },
+        {
+          title: 'ЭЛЕКТРИЧЕСКИЕ КОТЛЫ ',
+          link: '/electric-boilers',
+        },
+        {
+          title: 'ПРАЙС ЛИСТ',
+          link: '/price-list',
+        },
+      ],
+      isActiveNav: false,
     }
   },
 }
