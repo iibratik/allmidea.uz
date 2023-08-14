@@ -1,6 +1,6 @@
 <template>
-  <v-footer class="d-flex flex-column footer">
-    <div class="px-4 py-2 bg-primary text-center w-100">
+  <v-footer class="d-flex bg-primary flex-column justify-end footer" height="300px"  >
+    <div class="px-4 py-2 footer-date text-center w-100">
       {{ new Date().getFullYear() }} — <strong>allmidea.uz</strong>
     </div>
   </v-footer>
