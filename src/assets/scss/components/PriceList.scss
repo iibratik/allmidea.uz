@@ -1,0 +1,19 @@
+/* Стили для контейнера Swiper */
+.swiper-container {
+
+  height: 540px; /* Высота контейнера слайдера (только для одного видимого слайда) */
+  overflow: hidden; /* Скрываем остальные слайды */
+}
+
+/* Стили для слайдов Swiper */
+.swiper-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 24px; /* Устанавливаем высоту каждого слайда равной высоте контейнера */
+}
+.price{
+    &-mobile{
+        margin-top: 60px;
+    }
+}

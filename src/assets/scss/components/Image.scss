@@ -1,0 +1,17 @@
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    cursor: pointer;
+  }
+
+  .table-img {
+    max-height: 100%;
+    max-width: 100%;
+    transition: transform 0.3s;
+  }
+
+  .table-img.enlarged {
+    transform: scale(3);
+  }
