@@ -9,19 +9,21 @@
     class="gallery-slider"
   >
     <swiper-slide class="slide-card" v-for="image in images" :key="image">
-      <img
+      <v-img
         class="slider-img"
         :class="imageClass"
+        :lazy-src="require(`@/assets/images/${path}/${image}.${format}`)"
         :src="require(`@/assets/images/${path}/${image}.${format}`)"
         alt="slider-img"
-      />
+      >
+      </v-img>
     </swiper-slide>
   </swiper>
 </template>
 
 <script>
-import { Swiper, SwiperSlide, } from 'swiper/vue'
-import { Autoplay, Navigation} from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay, Navigation } from 'swiper/modules'
 import 'swiper/css/navigation'
 import 'swiper/css'
 export default {
@@ -31,28 +33,27 @@ export default {
   },
   setup() {
     return {
-      modules: [Navigation, Autoplay,], // Не забудьте добавить модуль Navigation здесь
+      modules: [Navigation, Autoplay], // Не забудьте добавить модуль Navigation здесь
     }
   },
-  props:{
-    images:{
+  props: {
+    images: {
       typeof: Array,
-      require: true
+      require: true,
     },
-    format:{
+    format: {
       typeof: String,
     },
-    path:{
+    path: {
       typeof: String,
     },
-    slidesPerView:{
+    slidesPerView: {
       typeof: Number,
       required: true,
     },
-    imageClass:{
+    imageClass: {
       type: String,
-    }
+    },
   },
 }
 </script>
-

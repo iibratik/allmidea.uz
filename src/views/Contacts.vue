@@ -1,5 +1,5 @@
 <template>
-  <v-card-title class="section-title contacts-title gallery-title">НАШИ НОМЕРА</v-card-title>
+  <v-card-title class="section-title contacts-title gallery-title">КОНТАКТЫ</v-card-title>
   <div class="contacts">
     <div class="wrapper">
       <a href="tel:+998971599099" class=" section-title gallery-title title">+998 97 159 90 99</a>
